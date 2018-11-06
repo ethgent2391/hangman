@@ -3,6 +3,7 @@
     var correct = 0;
     var usrpts = 0;
     var aipt = 0;
+    var length = 0;
     var guessblanks = "";
     var wordlist = ["sneeze", "teeth", "man", "auspicious", "cumbersome", "real", "grateful", "sprout", "rich", "crook", "rebel", "matrix", "array", "script" ]
     var attempts = 0
@@ -10,19 +11,13 @@
     var word = wordlist[rand];
     var n = word.length;
 
-
-    // console.log ("i choose " + word);
+    console.log ("i choose " + word);
     
     document.onkeyup = function(event){
         var letter = event.key.toLowerCase();
+        length++;
         console.log(letter);
-        var exclusions = [];
-        
-        
-
-
-
-
+    
         if (word.indexOf(letter) == -1)
              chances--;
              if (word.indexOf(letter) == -1)
@@ -43,9 +38,9 @@
                 usrpts++
                 console.log("computer points: " + aipt + ". Player points: " + usrpts)
                 attempts=0;
-                }
+                }  
+            }
 
-        }
     
 
     
