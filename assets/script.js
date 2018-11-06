@@ -20,7 +20,6 @@
         console.log(letter);
 
 
-        
         if (word.indexOf(letter) == -1)
              chances--;
              if (word.indexOf(letter) == -1)
@@ -28,16 +27,20 @@
             if (word.indexOf(letter) >= 0){
             attempts++;
             console.log("good guess!")}
-            if (attempts == n)
-            console.log ("you win!");
-        
+            
         
         if (chances == 0){
             console.log("you lose!");
             aipt++;
             console.log("computer points: " + aipt + ". Player points: " + usrpts)
-
-        }
+            chances=7;
+            }
+        if (attempts == n){
+                console.log ("you win!");
+                usrpts++
+                console.log("computer points: " + aipt + ". Player points: " + usrpts)
+                attempts=0;
+                }
 
         }
     
