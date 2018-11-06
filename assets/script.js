@@ -11,13 +11,16 @@
     var n = word.length;
 
 
-    console.log ("i choose " + word);
+    // console.log ("i choose " + word);
     
-
-
     document.onkeyup = function(event){
         var letter = event.key.toLowerCase();
         console.log(letter);
+        var exclusions = [];
+        
+        
+
+
 
 
         if (word.indexOf(letter) == -1)
