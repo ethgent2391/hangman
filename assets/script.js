@@ -10,13 +10,29 @@
     var rand = Math.floor(Math.random()*wordlist.length);
     var word = wordlist[rand];
     var n = word.length;
-
-    console.log ("i choose " + word);
+    var exempt = [];
     
+
+    function selection(){
+        rand = Math.floor(Math.random()*wordlist.length);
+        word = wordlist[rand];
+        n = word.length;
+        return word;
+    }
+    // console.log ("i choose " + word);
+
     document.onkeyup = function(event){
         var letter = event.key.toLowerCase();
+        exempt.push(letter);
         length++;
+        console.log(exempt);
         console.log(letter);
+
+        for (var j = 0; j < word.length; j++) {
+            if (word.charAt(j) === letter) {
+                correct += 1;
+            }
+        }
     
         if (word.indexOf(letter) == -1)
              chances--;
@@ -32,14 +48,17 @@
             aipt++;
             console.log("computer points: " + aipt + ". Player points: " + usrpts)
             chances=7;
+            selection();
             }
         if (attempts == n){
                 console.log ("you win!");
                 usrpts++
                 console.log("computer points: " + aipt + ". Player points: " + usrpts)
                 attempts=0;
+                selection();
                 }  
             }
+        
 
     
 
