@@ -14,7 +14,7 @@
     
 
     function selection(){
-        rand = Math.floor(Math.random()*wordlist.length);
+        rand = Math.floor(Math.random()*wordlist.length)
         word = wordlist[rand];
         n = word.length;
         return word;
