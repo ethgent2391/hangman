@@ -1,3 +1,6 @@
-.body{
+body{
+    background-image: url("../images/dark-triangles.png");
+    background-size: 900px;
+    background-repeat: repeat;
 
 }
