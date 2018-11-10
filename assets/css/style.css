@@ -12,4 +12,8 @@ body{
     top:-10;
     left:50;
     z-index:3;
+    opacity: 1;
+}
+#cage{
+    opacity: 0.0;
 }
